@@ -1,0 +1,118 @@
+.landing{
+    .container{
+        .Reciters{
+            .reciterContainer{
+            display: flex;
+            align-items: flex-start;
+            gap: 2%;
+            background-color: #1F305E;
+            padding: 20px;
+            border-radius: 8px;
+            & > div{
+                height: 57vh;
+                width: 50vh;
+                overflow: scroll;
+            }
+            @media #{$maxSmallScreen} {
+                flex-wrap: wrap-reverse;
+                padding: 10px;
+            }
+            .reciters{
+                width: 60%;
+                display: grid;
+                grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+                grid-row-gap: 10px;
+                grid-column-gap:10px ;
+                @media #{$maxSmallScreen} {
+                    width: 100%;
+                    height: 30vh;
+                }
+                .reciter-card{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 10px;
+                    cursor: pointer;
+                    background-color: #e3e0e04d;
+                    border-radius: 10px;
+                    transition: all ease-in-out 0.3s;
+                    &:hover{
+                        background-color:#1F305E ;  
+                    }
+                    &.active{
+                        background-color:#1F305E ;   
+                    }
+                    .reciter-name{
+                        width: 150px;
+                        height: auto;
+                        @media (max-width:400px) {
+                            width: 107px;
+                        }
+                    }
+                }
+            }
+            .suarhs{
+                width: 38%;
+                overflow: auto;
+                 @media #{$maxSmallScreen} {
+                    width: 100%;
+                    height: 30vh;
+                }
+                .surahlist{
+                    .surah {
+                        padding: 10px; 
+                        background-color: rgba(227, 224, 224, 0.3); 
+                        margin-bottom: 10px; 
+                        border-radius: 8px; 
+                        color: #FFF; 
+                        display: flex; 
+                        justify-content: space-between; 
+                        align-items: center; 
+                        cursor: pointer;
+                        transition: all 0.3s ease-in-out;
+                        &:hover{
+                            background-color: #1F305E;
+                        }
+                        &.active{
+                            background-color: #1F305E;
+                        }
+                    }
+                }
+            }
+        }
+        .ayaControl{
+            .audioControl{
+                width: 100%;
+                padding-top: 10px;
+            }
+        }
+        .controlBtns{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            padding-top: 10px;
+            button{
+                width: 40px;
+                height: 40px;
+                border: none;
+                outline: none;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                background-color: #1F305E;
+                color: #FFF;
+            }
+        }
+        }
+    }
+}
+
+::-webkit-scrollbar {
+  width: 4px; /* Width of the scrollbar */
+  height: 8px; /* Height of the horizontal scrollbar */
+}
