@@ -1,0 +1,29 @@
+.landing {
+    .container {
+        .sajdaPart {
+            padding: 20px 0;
+            .sajda {
+                text-align: right;
+                line-height: 2;
+                font-size: 25px;
+                padding:10px;
+                background-color: #fbfbfb;
+                margin-bottom: 10px;
+                position: relative;
+                padding-right: 20px;
+                @media #{$maxSmallScreen} {
+                    font-size: 19px;
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    background-color: $mainColor;
+                    width: 3px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.landing {
+    .container {
+        .pages {
+            margin-bottom: 40px;
+            padding-top: 20px;
+            display: grid;
+            &.toggleBtn {
+                display: none;
+            }
+            .inputContainer {
+                width: 100%;
+                text-align: start;
+                margin-bottom: 20px;
+                input {
+                    border: none;
+                    outline: none;
+                    padding: 8px 16px;
+                    background-color: #b2dbfb;
+                    color: rgba(0 0 0/ 0.5);
+                    border-radius: 8px;
+                    font-size: 18px;
+                    margin-left: 10px;
+                    @media #{$maxSmallScreen} {
+                        width: 100%;
+                        margin-bottom: 10px;
+                    }
+                    &[type="submit"] {
+                        cursor: pointer;
+                    }
+                }
+                .inputNumber::-webkit-input-placeholder {
+                    color: rgba(0 0 0/ 0.5);
+                }
+                .inputNumber:focus::-webkit-input-placeholder {
+                    opacity: 0;
+                    transition: 0.2s ease-in-out;
+                }
+            }
+            .surahname {
+                font-size: 28px;
+                font-weight: 500;
+                color: #0c84e4;
+                margin-bottom: 10px;
+                font-family: 'Aref Ruqaa', serif;
+            }
+            .pageContent {
+                font-size: 24px;
+                color: #333;
+                text-align: right;
+                line-height: 1.5;
+                display:ruby;
+                @media #{$maxSmallScreen} {
+                    font-size: 20px;
+                    padding: 10px;
+                }
+                .nextAndPreviousBtn {
+                    width: 100%;
+                    text-align: center;
+                    padding-top: 20px;
+                    .next , .previous {
+                        width: 40px;
+                        height: 40px;
+                        background-color: $mainColor;
+                        color: #fff;
+                        text-align: center;
+                        line-height: 40px;
+                        margin-left: 10px;
+                        font-size: 22px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        border-radius: 50%;
+                        &.transparent {
+                            background-color: $altColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
